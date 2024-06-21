@@ -1,0 +1,281 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  height: 100vh;  
+  background-image: url(../pcakeimages/home.jpg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  background-color: #ff7da7;
+  padding: 20px;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 75%;  /* Adjust the top value to control how much of the logo hangs below the header */
+  transform: translate(-50%, -50%);
+}
+
+.logo img {
+  height: 100px;  /* Adjust the height as needed */
+}
+
+.sidenav {
+  width: 0;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c5b0e4;
+  background-image: url('../pcakeimages/sidenav.png');  /* Add this line */
+  background-size: cover;  /* Adjust as needed */
+  background-repeat: no-repeat;  /* Adjust as needed */
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #91075c;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #260e92;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 5% ;
+  margin-left: 90px; /* Adjust margin to move the content higher */
+  margin-bottom: 10px;
+}
+
+.gif {
+  position: absolute;
+  right: 115px; /* Position the .gif element 10px from the right edge of the viewport */
+  top: 10px; /* Adjust top position as needed */
+  max-width: 100%; /* Ensure the .gif element doesn't exceed its container width */
+}
+
+.gif img {
+  height: 155px;
+  width: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is displayed as a block element */
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+}
+
+.quote-box {
+  background-color: #f9f9f9; /* Background color of the quote box */
+  border-left: 5px solid #ff9fed; /* Left border color and width */
+  padding: 20px; /* Spacing inside the quote box */
+  margin: 0;
+  width: 85%; /* Adjust width as needed */
+}
+
+blockquote {
+  margin: 0; /* Remove default margin */
+}
+
+blockquote p {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic; /* Style the quote text as italic */
+}
+
+.button {
+  --bg: #b933a3;
+  --hover-bg: #fabcec;
+  --hover-text: #5a0c4d;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 6px; /* Increase border-radius */
+  padding: 25px; /* Increase padding */
+  font-size: 18px; /* Increase font size */
+  font-weight: 600;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-top: 15px;
+  margin-left: 5px; /* Adjust margin as needed */
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+}
+
+.button:hover::after {
+  box-shadow: none;
+}
+
+.button:active {
+  transform: translate(0);
+}
+
+.button:active::after {
+  box-shadow: none;
+}
+
+main {
+  margin-top: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  animation: slideInTop 1.5s ease forwards;
+}
+
+.column {
+  animation: slideInTop 1.5s ease forwards;
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.footer {
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 50px;  /* Adjust the height as needed */
+justify-content: center;  /* Centers horizontally */
+align-items: center;  
+background-color: #ff7da7;
+color: white;
+font-size: medium;
+text-align: center;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .button {
+    width: auto; /* Adjust width based on content */
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) if text overflows */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .button {
+    width: auto; /* Adjust width based on content */
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) if text overflows */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .button {
+    width: auto; /* Adjust width based on content */
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) if text overflows */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .button {
+    width: auto; /* Adjust width based on content */
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) if text overflows */
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .button {
+    width: auto; /* Adjust width based on content */
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) if text overflows */
+  }
+}
+
+
+

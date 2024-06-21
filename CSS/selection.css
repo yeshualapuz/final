@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  header {
+    background-color: #ff7da7;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 75%;  /* Adjust the top value to control how much of the logo hangs below the header */
+    transform: translate(-50%, -50%);
+  }
+  
+  .logo img {
+    height: 100px;  /* Adjust the height as needed */
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #c5b0e4;
+    background-image: url('../pcakeimages/sidenav.png');  /* Add this line */
+    background-size: cover;  /* Adjust as needed */
+    background-repeat: no-repeat;  /* Adjust as needed */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #91075c;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #260e92;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .topnav-right {
+    float: right;
+    margin-right: 0;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Change color to black */
+  }
+
+  .topnav-right a {
+    color: rgb(255, 255, 255); /* Ensure all links are initially black */
+    size: 10px;
+    text-decoration: none;
+  }
+
+
+.recipes h1{
+    color: #661447;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    bottom: -20px;
+}
+
+.collage {
+    text-align: center;
+    padding: 20px;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust gap between items */
+}
+
+.collage-container.center-grid {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+}
+
+
+.collage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Initially hide the items */
+    transform: translateY(50px); /* Initially move items down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.collage-item a {
+    display: block; /* Ensure the link takes up space as a block element */
+}
+
+.collage-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
+    transition: transform 0.5s ease; /* Smooth transition for image */
+}
+
+.collage-item p {
+    margin-top: 10px; /* Adjust spacing between image and text */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    text-decoration: none;
+}
+
+
+
+.footer {
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 50px;  /* Adjust the height as needed */
+justify-content: center;  /* Centers horizontally */
+align-items: center;  
+background-color: #ff7da7;
+color: white;
+font-size: medium;
+text-align: center;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,0 +1,33 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.bg img{
+  height: 100%;
+  width: 100%;
+}
+.container {
+  position: relative;
+}
+
+.topnav-rightfb, .topnav-rightyt, .topnav-rightig {
+  position: absolute;
+  right: 12%; 
+  margin-top: 15px;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.topnav-rightfb a, .topnav-rightyt a, .topnav-rightig a {
+  color: #ff7da7;
+  size: 10px;
+}
+
+a:hover{
+  color: rgb(197, 187, 255);
+}

@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+header {
+  background-color: #ff7da7;
+  padding: 20px;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 75%;  /* Adjust the top value to control how much of the logo hangs below the header */
+  transform: translate(-50%, -50%);
+}
+  
+  .logo img {
+  height: 100px;  /* Adjust the height as needed */
+}
+  
+.topnav-right {
+  float: right;
+  margin-right: 0;
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(255, 255, 255); /* Change color to black */
+}
+
+.topnav-right a {
+  color: rgb(255, 255, 255); /* Ensure all links are initially black */
+  size: 10px;
+  text-decoration: none;
+}
+  
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c5b0e4;
+  background-image: url('../pcakeimages/sidenav.png');  /* Add this line */
+  background-size: cover;  /* Adjust as needed */
+  background-repeat: no-repeat;  /* Adjust as needed */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+  
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #91075c;
+  display: block;
+  transition: 0.3s;
+}  
+  
+.sidenav a:hover {
+  color: #260e92;
+}
+  
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.about-us {
+    padding: 20px;
+    text-align: center;
+
+}
+
+.about-us h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #ff7da7;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.quote-box {
+    background-color: #f9f9f9; /* Background color of the quote box */
+    border-left: 5px solid #ff9fed; /* Left border color and width */
+    padding: 20px; /* Spacing inside the quote box */
+    margin-top: 50px; /* Spacing around the quote box */
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: -2%;
+}
+
+blockquote {
+    margin: 0; /* Remove default margin */
+}
+
+blockquote p {
+    font-size: 20px;
+    text-align: center;
+    font-style: italic; /* Style the quote text as italic */
+}
+
+footer {
+    margin-top: 10px; /* Add space between quote text and author */
+    font-style: normal; /* Reset italic style */
+    text-align: center; /* Align the author's name to the right */
+}
+
+
+.collage {
+    text-align: center;
+    padding: 20px;
+}
+
+.collage h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.collage-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
+}
+
+.styled-list {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.styled-list h1{
+    font-family:  "Vladimir Script";
+}
+
+
+.styled-list li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    background-color: #f0f0f0; /* Add background color */
+    padding: 30px; /* Add padding */
+    border-radius:  5px; /* Add rounded corners */
+    text-align: center; /* Center the text horizontally */
+}
+
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.footer {
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 50px;  /* Adjust the height as needed */
+justify-content: center;  /* Centers horizontally */
+align-items: center;  
+background-color: #ff7da7;
+color: white;
+font-size: medium;
+text-align: center;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
